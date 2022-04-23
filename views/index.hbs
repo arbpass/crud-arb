@@ -37,7 +37,7 @@
         </div>
     </nav>
 
-    <form class="mx-auto my-3 w-75" method="POST" action="/home">
+    <form class="mx-auto my-3 w-75" method="POST" action="/">
         <div class="mb-3">
             <h3><label for="exampleInputEmail1" class="form-label text-light">Title</label></h3>
             <input name="titleBox" type="text" class="form-control" id="titleBox" aria-describedby="emailHelp">
@@ -58,7 +58,7 @@
                 <h5 class="card-title" name="titleExist">{{title}}</h5>
                 <p class="card-text" name="textExist">{{notes}}</p>
                 <a href="#" class="btn btn-warning mb-2 editBtn" style="float: left; width: 90px;">Edit</a>
-                <a href="/home/delete/{{this._id}}" class="btn btn-warning mb-2 dltBtn" style="float: right; width: 90px;">Delete</a>
+                <a href="/delete/{{this._id}}" class="btn btn-warning mb-2 dltBtn" style="float: right; width: 90px;">Delete</a>
             </div>
         </div>
         {{/each}}

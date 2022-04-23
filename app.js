@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
-app.use("/home", user);
+app.use("/", user);
 
 
 app.listen(port);

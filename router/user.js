@@ -52,7 +52,7 @@ function createRecord(req, res){
     .catch((e)=>{
         console.log(e);
     })
-    res.redirect("/home");
+    res.redirect("/");
 }
 
 //update function
@@ -62,7 +62,7 @@ function updateRecord(req,res){
     db.collection("datas").findOneAndUpdate({title: req.body.titleBox}, {$set:{notes:req.body.textBox}})
 
     if (!err) {
-        res.redirect('/home');
+        res.redirect('/');
     }
     else { console.log('Error in employee delete :' + err); }
     });
@@ -72,7 +72,7 @@ function updateRecord(req,res){
 router.get('/delete/:id', (req, res) => {
     Crud.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
-            res.redirect('/home');
+            res.redirect('/');
         }
         else { console.log('Error in employee delete :' + err); }
     });
